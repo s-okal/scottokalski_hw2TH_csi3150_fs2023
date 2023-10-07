@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS file -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Scott Okalski</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+  </head>
+  <body>
+    <section class="layout">
+      <div class="header">
+        <nav class="navbar">
+          <!-- LOGO container-->
+          <div class="pics">
+            <img
+              src="/img/scottOkalski.jpg"
+              alt="Photo of Scott Okalski"
+              width="75"
+              height="75"
+            />
+          </div>
+          <span>Scott Okalski's Portfolio Website</span>
+          <!-- Navigation menu container -->
+          <ul class="nav-links">
+            <!-- HAMBURGER menu icon and checkbox hack -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <!-- Write out the nav menu options -->
+            <div class="menu">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./resume.html">Resume</a></li>
+              <li><a href="./funfacts.html">Fun Facts</a></li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+      <div class="main">
+        <!-- begins main content of page -->
+        <h3>Some fun facts about me...</h3>
+        <div id="favBookContainer">
+          <h4>Favorite Book: The Cat in the Hat</h4>
+          <img
+            src="../img/catHat.png"
+            alt="Book cover: The Cat in the Hat"
+            class="pics"
+          />
+          <h5>
+            The quintessential childhood book read to millions across many
+            generations. Fun artwork and wordplay. Great to revisit with your
+            nieces, nephews, and your own children and grandchildren. <br />
+            <a href="https://www.amazon.com/Cat-Hat-Dr-Seuss/dp/039480001X"
+              >Buy on Amazon</a
+            >
+          </h5>
+        </div>
+        <div id="audioTrackContainer">
+          <hr />
+          <h4>Favorite track: Zombie Eyed - The Dirty Nil</h4>
+          <h5>Noisy punk rock at its finest.</h5>
+          <h6>
+            All rights belong to The Dirty Nil. Please support the official
+            release. This is a technical exercise.
+          </h6>
+          <audio controls>
+            <!-- embedded mp3 file -->
+            <source src="../audio/zombieEyedCut.mp3" type="audio/mpeg" />
+            Your browser does not support the audio tag.
+          </audio>
+          <!-- super easy iframe provided by Spotify. On the desktop app, you can directly grab the HTML code to embed in your website.-->
+          <h5>Or if you prefer a Spotify player:</h5>
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/track/2riNBqOwRnmAPyQmutSYrc?utm_source=generator&theme=0"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div id="tvSeriesContainer">
+          <hr />
+          <h4>Favorite TV Series: Breaking Bad</h4>
+          <h5>
+            After his cancer diagnosis, Walter White does what he needs to do in
+            order to ensure his family's financial stability.
+          </h5>
+          <!-- YouTube iFrame to display content on site. Found this tutorial: https://forum.freecodecamp.org/t/youtube-refused-to-connect/245262-->
+          <iframe
+            width="420"
+            height="315"
+            src="https://www.youtube.com/embed/HhesaQXLuRY"
+            alt="This video is currently unavailable."
+          >
+          </iframe>
+        </div>
+
+        <!-- end of page's content -->
+      </div>
+      <div class="footer">
+        <!-- footer found on every page -->
+
+        © 2023 Scott Okalski. All rights reserved.<br />
+        <a href="mailto:scottokalski@oakland.edu">Email Me</a>
+      </div>
+    </section>
+  </body>
+</html>

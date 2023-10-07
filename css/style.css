@@ -1,0 +1,234 @@
+/* Used layout.bradwoods.io/customize for the foundation of this CSS template */
+/* layout  has header, main, and footer sections in a grid, similar to previous HTML site. Check further in this file for 
+    section-specific styling. */
+.layout {
+  display: grid;
+  grid:
+    "header" auto
+    "main" 1fr
+    "footer" auto
+    / 1fr;
+  gap: 8px;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #dfd9e2;
+}
+span {
+  font-size: 25px;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+/* style the layout of the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #5bc0eb;
+  color: #bee7e8;
+}
+
+.nav-links a {
+  color: #fff;
+}
+/* example of psuedo class usage in css */
+
+/* from class exampe but chaged some attributes */
+.menu li:hover {
+  background-color: #176767;
+  border-radius: 5px;
+  /* example of css transition */
+  transition: 0.3s ease;
+}
+
+/* Used for quote on homepage */
+.quote {
+  width: auto;
+  text-align: center;
+  font-style: italic;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.bodyText {
+  width: auto;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* Using id of container to apply animation */
+#progressToDegreeContainer {
+  animation: shakeHorizontal 1s linear 0s 5 normal forwards;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* style the navbar menu */
+.menu {
+  display: flex;
+  gap: 3em;
+  font-size: 25px;
+}
+
+.pics {
+  border: 5px solid #555;
+}
+
+.pics:hover {
+  animation: picHover 2s ease 0s 1 normal forwards;
+}
+
+.header {
+  grid-area: header;
+}
+
+/* background colors for main and footer sections */
+.main {
+  grid-area: main;
+  background-color: #e59500;
+}
+.footer {
+  grid-area: footer;
+  background-color: #c3423f;
+  text-align: center;
+}
+
+/* responsive styling for the navbar */
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* This was taken from the in-class demo of implementing a hamburger for smaller windows */
+/* responsive design using css media queries */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ANIMATIONS generated from https://webcode.tools/generators/css/keyframe-animation?utm_content=cmp-true */
+
+/* This animation is used for items with the span tag (website title in navbar) */
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(-8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateY(8px);
+  }
+
+  80% {
+    transform: translateY(6.4px);
+  }
+
+  90% {
+    transform: translateY(-6.4px);
+  }
+}
+
+/* animation for progress bar on home page */
+@keyframes shakeHorizontal {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(10px);
+  }
+
+  80% {
+    transform: translateX(8px);
+  }
+
+  90% {
+    transform: translateX(-8px);
+  }
+}
+
+/* for hover psudoclass, to be used with pictures */
+@keyframes picHover {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    transform: rotate(8deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
+  }
+}
